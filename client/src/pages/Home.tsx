@@ -187,20 +187,14 @@ export default function Home() {
               transform: heroLoaded ? "translateY(0)" : "translateY(40px)",
             }}
           >
-            <p className="text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-medium">
-              A Feature Film Rendered in Unreal Engine 5
-            </p>
             <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] uppercase">
               Drive Me
               <br />
               <span className="text-outline-thick text-white">To Rap</span>
             </h1>
-            <div className="mt-6 flex items-center gap-4">
-              <Waveform className="w-32 h-6 text-primary/60" />
-              <p className="max-w-xl text-white/70 text-lg md:text-xl font-serif-accent italic">
-                "Every city has a rhythm. Hers was about to change."
-              </p>
-            </div>
+            <p className="mt-6 text-white/40 text-xs md:text-sm tracking-[0.2em] uppercase font-mono-accent">
+              A Feature Film Rendered in Unreal Engine 5
+            </p>
           </div>
         </div>
 
