@@ -200,20 +200,14 @@ export default function Home() {
         <div className="container">
           <Reveal delay={150}>
             <div className="relative aspect-video w-full max-w-5xl mx-auto bg-card border border-border overflow-hidden group">
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-40 transition-opacity duration-700"
-                style={{ backgroundImage: `url(${STILL_URL})` }}
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/2YTdXFw4ahg?rel=0&modestbranding=1"
+                title="Drive Me to Rap — Official Trailer"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button
-                  onClick={() => toast.info("Trailer embed placeholder — paste your video URL here when ready.")}
-                  className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/90 flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer"
-                >
-                  <Play className="w-8 h-8 md:w-10 md:h-10 text-primary-foreground ml-1" />
-                </button>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-[8%] bg-black" />
-              <div className="absolute top-0 left-0 right-0 h-[8%] bg-black" />
             </div>
           </Reveal>
           <Reveal delay={300}>
