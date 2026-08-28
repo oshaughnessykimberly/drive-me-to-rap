@@ -160,7 +160,6 @@ export default function Home() {
 
       {/* ── Hero ── */}
       <section className="relative h-screen w-full overflow-hidden">
-        <CityGrid />
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
           style={{
@@ -198,7 +197,6 @@ export default function Home() {
 
       {/* ── Trailer Section ── */}
       <section id="trailer" className="relative py-24 md:py-32">
-        <CityGrid />
         <div className="container">
           <Reveal delay={150}>
             <div className="relative aspect-video w-full max-w-5xl mx-auto bg-card border border-border overflow-hidden group">
@@ -230,7 +228,6 @@ export default function Home() {
 
       {/* ── Grant / Press CTA ── */}
       <section id="contact" className="relative py-24 md:py-32 bg-card/50">
-        <CityGrid />
         <div className="container text-center max-w-3xl mx-auto">
           <Reveal>
             <h2 className="font-display text-4xl md:text-6xl mb-12 uppercase text-outline-thick text-white">
