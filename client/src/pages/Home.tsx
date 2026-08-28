@@ -102,8 +102,7 @@ function DMTRStamp({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   };
   return (
     <span
-      className={`inline-block font-mono-accent uppercase tracking-[0.2em] border border-foreground/40 text-foreground ${sizes[size]}`}
-      style={{ clipPath: "polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)" }}
+      className={`inline-block font-mono-accent uppercase tracking-[0.2em] text-foreground ${sizes[size]}`}
     >
       DMTR
     </span>
@@ -221,9 +220,9 @@ export default function Home() {
           </Reveal>
           <Reveal delay={300}>
             <p className="mt-12 max-w-2xl mx-auto text-center text-muted-foreground text-sm md:text-base leading-relaxed">
-              A rideshare driver by day, an unrecorded lyricist by night. When a passenger
-              hears the beat she's been too afraid to play out loud, she must decide whether
-              to keep her words private or let them move the streets that raised her.
+              Sam and Oona are two queer artists chasing a rap competition prize that could
+              buy them out of dead-end jobs and worse. But in this dark comedy, the beat
+              drops into something stranger — and the real prize isn't what it seems.
             </p>
           </Reveal>
         </div>
@@ -234,7 +233,7 @@ export default function Home() {
         <CityGrid />
         <div className="container text-center max-w-3xl mx-auto">
           <Reveal>
-            <h2 className="font-display text-4xl md:text-6xl mb-12 uppercase">
+            <h2 className="font-display text-4xl md:text-6xl mb-12 uppercase text-outline-thick text-white">
               Contact
             </h2>
             <div className="space-y-4 text-muted-foreground">
