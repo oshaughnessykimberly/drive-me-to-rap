@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Play, ArrowDown, Film, Cpu, Award, Mail, ChevronRight, Radio, MapPin, Music } from "lucide-react";
+import { Play, ArrowDown, Film, Cpu, Award, Mail, MapPin, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -102,7 +102,7 @@ function DMTRStamp({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   };
   return (
     <span
-      className={`inline-block font-display uppercase tracking-[0.15em] border-2 border-primary text-primary ${sizes[size]}`}
+      className={`inline-block font-mono-accent uppercase tracking-[0.2em] border border-primary text-primary ${sizes[size]}`}
       style={{ clipPath: "polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)" }}
     >
       DMTR
@@ -162,14 +162,6 @@ export default function Home() {
               Contact
             </button>
           </nav>
-          <Button
-            variant="outline"
-            size="sm"
-            className="border-primary/40 text-primary hover:bg-primary/10"
-            onClick={() => toast.info("Press kit download coming soon.")}
-          >
-            Press Kit
-          </Button>
         </div>
       </header>
 
@@ -198,7 +190,7 @@ export default function Home() {
             <p className="text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-medium">
               A Feature Film Rendered in Unreal Engine 5
             </p>
-            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] uppercase text-white">
+            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] text-white">
               Drive Me
               <br />
               <span className="text-primary">To Rap</span>
@@ -208,23 +200,6 @@ export default function Home() {
               <p className="max-w-xl text-white/70 text-lg md:text-xl font-serif-accent italic">
                 "Every city has a rhythm. Hers was about to change."
               </p>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
-                onClick={() => scrollTo("trailer")}
-              >
-                <Play className="w-5 h-5" /> Watch Trailer
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10"
-                onClick={() => scrollTo("synopsis")}
-              >
-                Read Synopsis
-              </Button>
             </div>
           </div>
         </div>
@@ -238,18 +213,6 @@ export default function Home() {
       <section id="trailer" className="relative py-24 md:py-32">
         <CityGrid />
         <div className="container">
-          <Reveal>
-            <div className="flex items-center gap-3 mb-4">
-              <Film className="w-5 h-5 text-primary" />
-              <span className="text-primary text-sm tracking-[0.25em] uppercase font-medium">
-                Official Selection
-              </span>
-            </div>
-            <h2 className="font-display text-4xl md:text-6xl uppercase mb-8">
-              The Trailer
-            </h2>
-          </Reveal>
-
           <Reveal delay={150}>
             <div className="relative aspect-video w-full max-w-5xl mx-auto bg-card border border-border overflow-hidden group">
               <div
@@ -267,10 +230,6 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 right-0 h-[8%] bg-black" />
               <div className="absolute top-0 left-0 right-0 h-[8%] bg-black" />
             </div>
-            <div className="flex items-center justify-center gap-3 mt-6 text-muted-foreground text-sm">
-              <Radio className="w-4 h-4 text-primary" />
-              <span>World Premiere — For Grant & Festival Consideration</span>
-            </div>
           </Reveal>
         </div>
       </section>
@@ -279,20 +238,20 @@ export default function Home() {
       <section id="synopsis" className="relative py-24 md:py-32 bg-card/50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
-            <Reveal>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-primary text-sm tracking-[0.25em] uppercase font-medium">
-                  Synopsis
-                </span>
-              </div>
-              <h2 className="font-display text-4xl md:text-6xl uppercase leading-[0.95]">
-                One City.
-                <br />
-                One Beat.
-                <br />
-                <span className="text-primary">One Voice.</span>
-              </h2>
-            </Reveal>
+          <Reveal>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-primary text-sm tracking-[0.25em] uppercase font-medium">
+                Synopsis
+              </span>
+            </div>
+            <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
+              One City.
+              <br />
+              One Beat.
+              <br />
+              <span className="text-primary">One Voice.</span>
+            </h2>
+          </Reveal>
             <Reveal delay={200}>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -328,7 +287,7 @@ export default function Home() {
                 Under the Hood
               </span>
             </div>
-            <h2 className="font-display text-4xl md:text-6xl uppercase mb-12">
+            <h2 className="font-display text-4xl md:text-6xl mb-12">
               Rendered in <span className="text-primary">Real Time</span>
             </h2>
           </Reveal>
@@ -355,11 +314,11 @@ export default function Home() {
                 <div className="border border-border p-8 hover:border-primary/40 transition-colors duration-300 group">
                   <div className="flex items-center justify-between mb-4">
                     <item.icon className="w-6 h-6 text-primary" />
-                    <span className="text-primary font-display text-4xl opacity-20 group-hover:opacity-60 transition-opacity">
+                    <span className="text-primary font-mono-accent text-3xl opacity-20 group-hover:opacity-60 transition-opacity">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl uppercase mt-4 mb-3">{item.title}</h3>
+                  <h3 className="font-display text-xl mt-4 mb-3">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
@@ -374,7 +333,7 @@ export default function Home() {
         <div className="container text-center max-w-3xl mx-auto">
           <Reveal>
             <Award className="w-10 h-10 text-primary mx-auto mb-6" />
-            <h2 className="font-display text-4xl md:text-6xl uppercase mb-6">
+            <h2 className="font-display text-4xl md:text-6xl mb-6">
               Support the <span className="text-primary">Final Cut</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
@@ -390,14 +349,6 @@ export default function Home() {
               >
                 <Mail className="w-5 h-5" /> Start a Conversation
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-accent gap-2"
-                onClick={() => toast.info("Press kit download coming soon.")}
-              >
-                Request Press Kit <ChevronRight className="w-4 h-4" />
-              </Button>
             </div>
           </Reveal>
         </div>
@@ -405,16 +356,10 @@ export default function Home() {
 
       {/* ── Footer ── */}
       <footer className="border-t border-border py-12">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
-          <DMTRStamp size="md" />
-          <p className="text-muted-foreground text-sm text-center">
+        <div className="container text-center">
+          <p className="text-muted-foreground text-sm">
             A feature film rendered in Unreal Engine 5. For grant & festival consideration.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <button onClick={() => scrollTo("trailer")} className="hover:text-foreground transition-colors">Trailer</button>
-            <button onClick={() => scrollTo("synopsis")} className="hover:text-foreground transition-colors">Synopsis</button>
-            <button onClick={() => scrollTo("contact")} className="hover:text-foreground transition-colors">Contact</button>
-          </div>
         </div>
       </footer>
     </div>
