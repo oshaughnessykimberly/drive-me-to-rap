@@ -102,7 +102,7 @@ function DMTRStamp({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   };
   return (
     <span
-      className={`inline-block font-mono-accent uppercase tracking-[0.2em] border border-primary text-primary ${sizes[size]}`}
+      className={`inline-block font-mono-accent uppercase tracking-[0.2em] border border-foreground/40 text-foreground ${sizes[size]}`}
       style={{ clipPath: "polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)" }}
     >
       DMTR
@@ -190,10 +190,10 @@ export default function Home() {
             <p className="text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-medium">
               A Feature Film Rendered in Unreal Engine 5
             </p>
-            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] text-white">
+            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] uppercase">
               Drive Me
               <br />
-              <span className="text-primary">To Rap</span>
+              <span className="text-outline-thick text-white">To Rap</span>
             </h1>
             <div className="mt-6 flex items-center gap-4">
               <Waveform className="w-32 h-6 text-primary/60" />
@@ -244,12 +244,12 @@ export default function Home() {
                 Synopsis
               </span>
             </div>
-            <h2 className="font-display text-4xl md:text-6xl leading-[0.95]">
+            <h2 className="font-display text-4xl md:text-6xl leading-[0.95] uppercase">
               One City.
               <br />
               One Beat.
               <br />
-              <span className="text-primary">One Voice.</span>
+              <span className="text-outline text-white">One Voice.</span>
             </h2>
           </Reveal>
             <Reveal delay={200}>
@@ -287,8 +287,8 @@ export default function Home() {
                 Under the Hood
               </span>
             </div>
-            <h2 className="font-display text-4xl md:text-6xl mb-12">
-              Rendered in <span className="text-primary">Real Time</span>
+            <h2 className="font-display text-4xl md:text-6xl mb-12 uppercase">
+              Rendered in <span className="text-outline text-white">Real Time</span>
             </h2>
           </Reveal>
 
@@ -314,11 +314,11 @@ export default function Home() {
                 <div className="border border-border p-8 hover:border-primary/40 transition-colors duration-300 group">
                   <div className="flex items-center justify-between mb-4">
                     <item.icon className="w-6 h-6 text-primary" />
-                    <span className="text-primary font-mono-accent text-3xl opacity-20 group-hover:opacity-60 transition-opacity">
+                    <span className="text-foreground/30 font-mono-accent text-3xl group-hover:text-foreground/60 transition-colors">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl mt-4 mb-3">{item.title}</h3>
+                  <h3 className="font-display text-xl uppercase mt-4 mb-3">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </Reveal>
@@ -333,8 +333,8 @@ export default function Home() {
         <div className="container text-center max-w-3xl mx-auto">
           <Reveal>
             <Award className="w-10 h-10 text-primary mx-auto mb-6" />
-            <h2 className="font-display text-4xl md:text-6xl mb-6">
-              Support the <span className="text-primary">Final Cut</span>
+            <h2 className="font-display text-4xl md:text-6xl mb-6 uppercase">
+              Support the <span className="text-outline text-white">Final Cut</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
               Drive Me to Rap is complete in picture and seeking partners for the final mile —
