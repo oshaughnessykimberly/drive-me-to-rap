@@ -179,7 +179,7 @@ export default function Home() {
         <LetterboxBar position="top" />
         <LetterboxBar position="bottom" />
 
-        <div className="relative z-30 h-full flex flex-col justify-end pb-[10vh] container">
+        <div className="relative z-30 h-full flex flex-col justify-center container">
           <div
             className="transition-all duration-1000 delay-300"
             style={{
@@ -187,12 +187,12 @@ export default function Home() {
               transform: heroLoaded ? "translateY(0)" : "translateY(40px)",
             }}
           >
-            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.9] uppercase">
-              Drive Me
+            <h1 className="font-display text-[clamp(4rem,14vw,12rem)] leading-[0.85] uppercase">
+              <span className="text-outline-thick text-white">Drive Me</span>
               <br />
               <span className="text-outline-thick text-white">To Rap</span>
             </h1>
-            <p className="mt-6 text-white/40 text-xs md:text-sm tracking-[0.2em] uppercase font-mono-accent">
+            <p className="mt-8 text-white/40 text-xs md:text-sm tracking-[0.2em] uppercase font-mono-accent">
               A Feature Film Rendered in Unreal Engine 5
             </p>
           </div>
