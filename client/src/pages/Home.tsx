@@ -220,9 +220,9 @@ export default function Home() {
           </Reveal>
           <Reveal delay={300}>
             <p className="mt-12 max-w-2xl mx-auto text-center text-muted-foreground text-sm md:text-base leading-relaxed">
-              Sam and Oona are two queer artists chasing a rap competition prize that could
-              buy them out of dead-end jobs and worse. But in this dark comedy, the beat
-              drops into something stranger — and the real prize isn't what it seems.
+              Desperation runs high as queer artists Sam and Oona chase a rap competition
+              prize that could buy them out of dead-end jobs and other questionable ways
+              of making ends meet.
             </p>
           </Reveal>
         </div>
