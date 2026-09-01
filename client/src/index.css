@@ -82,6 +82,15 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  @font-face {
+    font-family: "Boomme";
+    src: url("/fonts/Boomme.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: "Archivo", system-ui, sans-serif;
@@ -99,7 +108,7 @@
   }
 
   .font-display {
-    font-family: "Archivo Black", sans-serif;
+    font-family: "Boomme", "Archivo Black", sans-serif;
     letter-spacing: 0.02em;
   }
 

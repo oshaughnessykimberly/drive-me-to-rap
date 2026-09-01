@@ -202,7 +202,7 @@ export default function Home() {
             <div className="relative aspect-video w-full max-w-5xl mx-auto bg-card border border-border overflow-hidden group">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/2YTdXFw4ahg?rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/eBfMk8jtRzM?rel=0&modestbranding=1"
                 title="Drive Me to Rap — Official Trailer"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
