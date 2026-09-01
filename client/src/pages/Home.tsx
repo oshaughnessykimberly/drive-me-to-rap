@@ -229,8 +229,7 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p className="text-sm tracking-[0.2em] uppercase font-mono-accent">For Grant & Festival Inquiries</p>
-              <p className="text-lg">contact@drivemetorap.com</p>
-              <p className="text-sm">[Additional contact info placeholder]</p>
+              <p className="text-lg">toocreativesprod@gmail.com</p>
             </div>
           </Reveal>
         </div>
