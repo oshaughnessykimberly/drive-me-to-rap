@@ -229,7 +229,12 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p className="text-sm tracking-[0.2em] uppercase font-mono-accent">For Grant & Festival Inquiries</p>
-              <p className="text-lg">toocreativesprod@gmail.com</p>
+              <a
+                href="mailto:toocreativesprod@gmail.com"
+                className="text-lg text-foreground hover:text-primary transition-colors underline underline-offset-4 decoration-foreground/30 hover:decoration-primary"
+              >
+                toocreativesprod@gmail.com
+              </a>
             </div>
           </Reveal>
         </div>
@@ -239,7 +244,7 @@ export default function Home() {
       <footer className="border-t border-border py-12">
         <div className="container text-center">
           <p className="text-muted-foreground text-sm">
-            A feature film rendered in Unreal Engine 5. For grant & festival consideration.
+            A feature film rendered in Unreal Engine 5. For grant and festival consideration.
           </p>
         </div>
       </footer>
